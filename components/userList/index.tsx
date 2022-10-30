@@ -76,6 +76,7 @@ export function UserList(props) {
                       name={item.name}
                       description={item.description}
                       img={item.img}
+                      key={item.id}
                     />
                   </div>
                 );
@@ -95,6 +96,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
+                    key={item.id}
                   />
                 );
               })}
@@ -113,6 +115,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
+                    key={item.id}
                   />
                 );
               })}
@@ -131,6 +134,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
+                    key={item.id}
                   />
                 );
               })}
@@ -149,6 +153,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
+                    key={item.id}
                   />
                 );
               })}

@@ -6,6 +6,7 @@ type ListItemCardType = {
   name: string;
   img?: string;
   description: string;
+  key: number;
 };
 
 export function ListItemCard(props: ListItemCardType) {

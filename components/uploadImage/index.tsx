@@ -46,6 +46,7 @@ export class UploadImage extends Component<any, any> {
               this.state.url ||
               "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
             }
+            alt="Shoppingify's product"
           />
         </div>
       </div>
