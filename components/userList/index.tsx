@@ -27,8 +27,6 @@ export function UserList(props) {
 
   async function pullListItems() {
     const result = await getListItems(props.query);
-    console.log("RESULT", result);
-
     setVegetables(result.vegetables);
     setMeat(result.meat);
     setPasta(result.pasta);
@@ -56,7 +54,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id}
+                    key={item.id || Math.random() * 100}
                   />
                 );
               })}
@@ -76,7 +74,7 @@ export function UserList(props) {
                       name={item.name}
                       description={item.description}
                       img={item.img}
-                      key={item.id}
+                      key={item.id || Math.random() * 100}
                     />
                   </div>
                 );
@@ -96,7 +94,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id}
+                    key={item.id || Math.random() * 100}
                   />
                 );
               })}
@@ -115,7 +113,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id}
+                    key={item.id || Math.random() * 100}
                   />
                 );
               })}
@@ -134,7 +132,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id}
+                    key={item.id || Math.random() * 100}
                   />
                 );
               })}
@@ -153,7 +151,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id}
+                    key={item.id || Math.random() * 100}
                   />
                 );
               })}

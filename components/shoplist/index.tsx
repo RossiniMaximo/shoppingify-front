@@ -130,7 +130,7 @@ export function ShoppingList(props: ShoppingListProps) {
             <Source />
           </div>
           <div className={styles.text_container}>
-            <p className={styles.text}>Didn't find what you need?</p>
+            <p className={styles.text}>Didn&apos;t find what you need?</p>
             <div className={styles.btn_container}>
               <button
                 onClick={() => (props.onAddItem ? props.onAddItem(true) : "")}
