@@ -2,7 +2,7 @@ import styles from "./userList.module.css";
 import { getListItems } from "api";
 import { useEffect, useState } from "react";
 import { ListItemCard } from "ui/icons/cards/listItem";
-import { uselistTitleValue } from "lib/hooks";
+import { useListTitleValue } from "lib/hooks";
 import { ShoppingList } from "components/shoplist";
 
 type itemType = {
@@ -17,7 +17,7 @@ type itemType = {
 };
 
 export function UserList(props) {
-  const listTitle = uselistTitleValue();
+  const listTitle = useListTitleValue();
   const [vegetables, setVegetables] = useState([]);
   const [meat, setMeat] = useState([]);
   const [pasta, setPasta] = useState([]);
@@ -56,6 +56,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
+                    key={item.id}
                   />
                 );
               })}

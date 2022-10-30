@@ -30,8 +30,8 @@ export const useFruits = () => useRecoilState(fruits);
 export const useFruitsValue = () => useRecoilValue(fruits);
 export const useUserId = () => useRecoilState(userId);
 export const useUserIdValue = () => useRecoilValue(userId);
-export const uselistTitle = () => useRecoilState(listTitle);
-export const uselistTitleValue = () => useRecoilValue(listTitle);
+export const useListTitle = () => useRecoilState(listTitle);
+export const useListTitleValue = () => useRecoilValue(listTitle);
 export const useListId = () => useRecoilState(listId);
 export const useListIdValue = () => useRecoilValue(listId);
 

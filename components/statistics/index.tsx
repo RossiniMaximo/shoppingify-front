@@ -61,6 +61,7 @@ export function StatisticsComponent() {
                     width={"300px"}
                     label={item.name}
                     color="var(--orange)"
+                    key={item.quantity}
                   />
                 );
               })}

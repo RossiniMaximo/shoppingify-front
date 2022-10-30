@@ -9,7 +9,7 @@ import {
   usePasta,
   useUserIdValue,
   useListId,
-  uselistTitle,
+  useListTitle,
 } from "lib/hooks";
 import { ItemManager } from "components/itemManager";
 import {
@@ -41,7 +41,7 @@ export function ShoppingList(props: ShoppingListProps) {
   const [fruits, setFruits] = useFruits() as any;
   const [pasta, setPasta] = usePasta() as any;
   const [listId, setListId] = useListId();
-  const [listTitle, setListTitle] = uselistTitle();
+  const [listTitle, setListTitle] = useListTitle();
   const userId = useUserIdValue();
 
   useEffect(() => {
@@ -150,7 +150,7 @@ export function ShoppingList(props: ShoppingListProps) {
                 return (
                   <ItemManager
                     name={itemName}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                     removed={(res) => {
                       removeIt(beverages, itemName, "Beverages");
                     }}
@@ -168,7 +168,7 @@ export function ShoppingList(props: ShoppingListProps) {
                 return (
                   <ItemManager
                     name={itemName}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                     removed={(res) => {
                       removeIt(meatAndFish, itemName, "Meat & Fish");
                     }}
@@ -186,7 +186,7 @@ export function ShoppingList(props: ShoppingListProps) {
                 return (
                   <ItemManager
                     name={itemName}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                     removed={(res) => {
                       removeIt(vegetables, itemName, "Vegetables");
                     }}
@@ -215,7 +215,7 @@ export function ShoppingList(props: ShoppingListProps) {
                 return (
                   <ItemManager
                     name={itemName}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                     removed={(res) => {
                       removeIt(pasta, itemName, "Pasta");
                     }}
@@ -233,7 +233,7 @@ export function ShoppingList(props: ShoppingListProps) {
                 return (
                   <ItemManager
                     name={itemName}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                     removed={(res) => {
                       removeIt(dairyProducts, itemName, "Dairy Products");
                     }}
@@ -251,7 +251,7 @@ export function ShoppingList(props: ShoppingListProps) {
                 return (
                   <ItemManager
                     name={itemName}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                     removed={(res) => {
                       removeIt(fruits, itemName, "Fruits");
                     }}

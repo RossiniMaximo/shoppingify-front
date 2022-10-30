@@ -1,7 +1,7 @@
 import { AiTwotoneCalendar, BiTrash } from "ui/icons";
 import styles from "./listCard.module.css";
 import { useRouter } from "next/router";
-import { uselistTitle } from "lib/hooks";
+import { useListTitle } from "lib/hooks";
 import { deleteShoppingList } from "api";
 
 type ListCardProps = {
@@ -14,7 +14,7 @@ type ListCardProps = {
 
 export function ListCard(props: ListCardProps) {
   const router = useRouter();
-  const [listTitle, setListTitle] = uselistTitle();
+  const [listTitle, setListTitle] = useListTitle();
 
   return (
     <div

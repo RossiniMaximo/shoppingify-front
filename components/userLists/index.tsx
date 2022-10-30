@@ -37,6 +37,7 @@ export function UserLists() {
               removeItem={() => {
                 deleteShoppingListFromState(l.id, l);
               }}
+              key={l.id}
             />
           );
         })}
