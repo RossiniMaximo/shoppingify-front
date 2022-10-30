@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.month {
+  font-size: 12px;
+  padding: 5px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12px;
+  border: solid 1px #f0f0f0;
+  align-items: center;
+}
+@media (min-width: 1280px) {
+  .list {
+    padding: 15px;
+    border: solid 1px #f0f0f0;
+  }
+}
+.title {
+  font-size: 14px;
+  cursor: pointer;
+}
+@media (min-width: 1280px) {
+  .title {
+    font-size: 16px;
+  }
+}
+.data_container {
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (min-width: 1280px) {
+  .data {
+    gap: 20px;
+  }
+}
+.delete_icon {
+  display: flex;
+  align-items: center;
+}
+
+.calendar_container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.date {
+  font-size: 8px;
+}
+.completed {
+  border: solid 1px lightblue;
+  color: lightblue;
+  border-radius: 12px;
+  padding: 3px;
+  font-size: 10px;
+}
+.uncompleted {
+  border: solid 1px red;
+  color: red;
+  border-radius: 12px;
+  padding: 3px;
+  font-size: 10px;
+}
+
+.arrow {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .arrow {
+    display: block;
+  }
+}

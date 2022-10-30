@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+}
+:root {
+  --light-gray: rgb(255, 255, 255);
+  --gray: #a8a8a8;
+  --almond: #eaddca;
+  --cordovan: #814141;
+  --orange: #ffac1c;
+  --dark-orange: #cd853f;
+}

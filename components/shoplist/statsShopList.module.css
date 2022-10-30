@@ -1,0 +1,32 @@
+.list_submit_container {
+  background-color: #fafafa;
+  height: 100px;
+  padding: 20px;
+}
+.list_submit {
+}
+.options {
+  display: flex;
+  justify-content: space-around;
+}
+.option1 {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.option2 {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background-color: lightblue;
+  color: #fafafa;
+  cursor: pointer;
+}
+.pop_up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,35 @@
+.container {
+  cursor: pointer;
+  width: 200px;
+}
+.list {
+  list-style: none;
+}
+.item {
+  border: solid 1px;
+  border-radius: 12px;
+  padding: 5px;
+  text-align: center;
+  background-color: #fafafa;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.item_info__container {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 12px;
+}
+.item_description {
+  font-size: 12px;
+  text-align: left;
+}
+.item_img_container {
+  position: relative;
+  height: 100px;
+}

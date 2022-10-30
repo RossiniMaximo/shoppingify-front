@@ -1,0 +1,62 @@
+.main {
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 50px;
+}
+@media (min-width: 1280px) {
+  .top {
+    flex-direction: row;
+    align-items: initial;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+.charts_manager {
+}
+@media (min-width: 1280px) {
+  .charts_manager {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-left: 95px;
+  }
+}
+.chart {
+}
+.chart_title {
+  font-size: 18px;
+  padding: 5px;
+}
+.item {
+}
+
+.big_chart {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .big_chart {
+    display: block;
+  }
+}
+.shopping_list_container {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .shopping_list_container {
+    display: block;
+    margin-top: 50px;
+  }
+}

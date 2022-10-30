@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+@media (min-width: 1280px) {
+  .container {
+    height: 1000px;
+  }
+}

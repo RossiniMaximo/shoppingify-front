@@ -1,0 +1,38 @@
+.item_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.name {
+  font-size: 14px;
+}
+.pieces {
+  font-size: 12px;
+  border: solid 1px;
+  border-radius: 12px;
+  padding: 4px;
+  background-color: #fafafa;
+  height: 35px;
+}
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 1280px) {
+  .options {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+  }
+}
+.delete_cont {
+}
+@media (min-width: 1280px) {
+  .delete_cont {
+    background-color: var(--dark-orange);
+    border-radius: 12px;
+  }
+}

@@ -1,0 +1,44 @@
+.img_container {
+  position: relative;
+  height: 100px;
+}
+.main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 150px;
+}
+.progress_bar {
+  -webkit-appearance: none;
+}
+.progress_bar::-webkit-progress-bar {
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+.progress_bar::-webkit-progress-value {
+  background-color: var(--cordovan);
+  border-radius: 8px;
+}
+.input_file {
+  display: none;
+}
+.label {
+  height: 60px;
+  width: 200px;
+  background-color: var(--cordovan);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+.btn_container {
+  width: 200px;
+}
+.btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+}

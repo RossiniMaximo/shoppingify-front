@@ -1,0 +1,30 @@
+.main_container {
+  width: 100%;
+  background-color: aliceblue;
+  height: fit-content;
+  cursor: pointer;
+}
+@media (min-width: 1280px) {
+  .main_container {
+    width: 1260px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.container {
+  width: 100%;
+}
+.title {
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+}
+.list_container {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .list_container {
+    display: block;
+  }
+}
