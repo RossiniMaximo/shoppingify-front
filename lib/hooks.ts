@@ -36,7 +36,7 @@ export const useListId = () => useRecoilState(listId);
 export const useListIdValue = () => useRecoilValue(listId);
 
 export function useItems() {
-  const { data, error, mutate } = useSWR("/items", fetchAPI, {
+  const { data } = useSWR("/items", fetchAPI, {
     revalidateOnFocus: true,
   });
 

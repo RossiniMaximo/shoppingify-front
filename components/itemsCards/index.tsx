@@ -11,6 +11,7 @@ import {
 type ItemCardsProps = {
   name: string;
   category: string;
+  key: number;
 };
 
 // Manage UI shopping list add item to list animation.

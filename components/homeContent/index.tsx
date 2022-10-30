@@ -149,6 +149,7 @@ export function HomeContent() {
                     name={i.name}
                     category={i.category}
                     key={Math.floor(Math.random() * 100)}
+                    
                   />
                 );
               })}
