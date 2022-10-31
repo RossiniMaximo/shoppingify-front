@@ -60,14 +60,12 @@ export function UserList(props) {
             <div className={styles.card_container}>
               {meat.map((item: itemType) => {
                 return (
-                  <div>
-                    <ListItemCard
-                      name={item.name}
-                      description={item.description}
-                      img={item.img}
-                      key={uuidv4()}
-                    />
-                  </div>
+                  <ListItemCard
+                    name={item.name}
+                    description={item.description}
+                    img={item.img}
+                    key={uuidv4()}
+                  />
                 );
               })}
             </div>

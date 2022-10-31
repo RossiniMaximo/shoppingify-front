@@ -37,13 +37,11 @@ export function HomeContent() {
         <div className={styles.content}>
           {results?.map((item: itemType) => {
             return (
-              <div>
-                <ItemCards
-                  name={item.name}
-                  category={item.category}
-                  key={uuidv4()}
-                />
-              </div>
+              <ItemCards
+                name={item.name}
+                category={item.category}
+                key={uuidv4()}
+              />
             );
           })}
         </div>
