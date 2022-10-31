@@ -1,8 +1,7 @@
 import { getListItems, getUserLists } from "api";
 
 const DEV_URL = "http://localhost:5500";
-const PROD_URL = process.env.PRODUCTION_DATABASE;
-
+const PROD_URL = process.env.NEXT_PUBLIC_PRODUCTION_DATABASE || "";
 export function getAuthToken() {
   return localStorage.getItem("auth_token");
 }
