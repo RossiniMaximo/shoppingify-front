@@ -3,11 +3,13 @@ import { useItems } from "lib/hooks";
 import { ItemCards } from "components/itemsCards";
 import { SearchForm } from "components/searchForm/searchForm";
 import { ShoppingList } from "components/shoplist";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useIsListValue } from "lib/hooks";
 import { AddItemForm } from "components/addItemForm";
 import { itemType } from ".d";
 import { v4 as uuidv4 } from "uuid";
+import { getAuthToken } from "lib";
+import { useRouter } from "next/router";
 
 export function HomeContent() {
   const [isAddItem, setIsAddItem] = useState(false);
@@ -15,7 +17,14 @@ export function HomeContent() {
   const [results, setResults] = useState([]);
   const { data } = useItems();
   const isList = useIsListValue();
+  const router = useRouter();
   const style = isSearchResult ? { display: "none" } : {};
+  useEffect(() => {
+    const token = getAuthToken();
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
 
   return (
     <div className={styles.container}>
