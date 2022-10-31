@@ -2,15 +2,7 @@ import { AiTwotoneCalendar, BiTrash } from "ui/icons";
 import styles from "./listCard.module.css";
 import { useRouter } from "next/router";
 import { useListTitle } from "lib/hooks";
-import { deleteShoppingList } from "api";
-
-type ListCardProps = {
-  date: string;
-  title: string;
-  completed: string;
-  listId: number;
-  removeItem: (any) => any;
-};
+import { ListCardProps } from ".d";
 
 export function ListCard(props: ListCardProps) {
   const router = useRouter();

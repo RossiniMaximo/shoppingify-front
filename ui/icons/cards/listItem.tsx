@@ -1,17 +1,10 @@
 import styles from "./listItem.module.css";
 import { useState } from "react";
 import Image from "next/image";
-
-type ListItemCardType = {
-  name: string;
-  img?: string;
-  description: string;
-  key: number;
-};
+import { ListItemCardType } from ".d";
 
 export function ListItemCard(props: ListItemCardType) {
   const [isActive, setIsActive] = useState(false);
-  const style = isActive ? { display: "block" } : {};
   return (
     <div>
       <div onClick={() => setIsActive(!isActive)}>

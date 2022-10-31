@@ -7,12 +7,7 @@ import {
   useBeverages,
   useFruits,
 } from "lib/hooks";
-
-type ItemCardsProps = {
-  name: string;
-  category: string;
-  key: number;
-};
+import { ItemCardsProps } from "../../.d";
 
 // Manage UI shopping list add item to list animation.
 

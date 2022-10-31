@@ -4,17 +4,7 @@ import { useEffect, useState } from "react";
 import { ListItemCard } from "ui/icons/cards/listItem";
 import { useListTitleValue } from "lib/hooks";
 import { ShoppingList } from "components/shoplist";
-
-type itemType = {
-  category: string;
-  name: string;
-  createdAt: string;
-  description: string;
-  id: number;
-  img: string;
-  listItem: object;
-  updatedAt: string;
-};
+import { itemType } from ".d";
 
 export function UserList(props) {
   const listTitle = useListTitleValue();

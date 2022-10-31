@@ -6,11 +6,10 @@ export function ItemManager(item) {
   const [pieces, setPieces] = useState(0);
   const [isOptions, setIsOptions] = useState(false);
   const [isRemove, setIsRemove] = useState(false);
-  /* const style = isRemove ? { display: "none" } : {}; */
 
   if (item != undefined) {
     return (
-      <div  className={styles.item_container}>
+      <div className={styles.item_container}>
         <p className={styles.name} onClick={() => setIsOptions(false)}>
           {item.name}
         </p>

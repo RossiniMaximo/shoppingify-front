@@ -6,14 +6,15 @@ import { ShoppingList } from "components/shoplist";
 import { useState } from "react";
 import { useIsListValue } from "lib/hooks";
 import { AddItemForm } from "components/addItemForm";
+import { itemType } from ".d";
 
 export function HomeContent() {
   const [isAddItem, setIsAddItem] = useState(false);
-  const isList = useIsListValue();
-  const { data } = useItems();
   const [isSearchResult, setIsSearchResult] = useState(false);
-  const style = isSearchResult ? { display: "none" } : {};
   const [results, setResults] = useState([]);
+  const { data } = useItems();
+  const isList = useIsListValue();
+  const style = isSearchResult ? { display: "none" } : {};
 
   return (
     <div className={styles.container}>
@@ -33,13 +34,13 @@ export function HomeContent() {
       </div>
       {isSearchResult ? (
         <div className={styles.content}>
-          {results?.map((item: any) => {
+          {results?.map((item: itemType) => {
             return (
               <div>
                 <ItemCards
                   name={item.name}
                   category={item.category}
-                  key={Math.floor(Math.random() * 100)}
+                  key={Math.random() * 100}
                 />
               </div>
             );
@@ -53,12 +54,12 @@ export function HomeContent() {
           <div>
             <p className={styles.items_category}>Beverages</p>
             <div className={styles.items_container}>
-              {data?.beverages.map((b: any) => {
+              {data?.beverages.map((b: itemType) => {
                 return (
                   <ItemCards
                     name={b.name}
                     category={b.category}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                   />
                 );
               })}
@@ -71,12 +72,12 @@ export function HomeContent() {
           <div>
             <p className={styles.items_category}>Dairy Products</p>
             <div className={styles.items_container}>
-              {data.dairyProducts.map((p: any) => {
+              {data.dairyProducts.map((i: itemType) => {
                 return (
                   <ItemCards
-                    name={p.name}
-                    category={p.category}
-                    key={Math.floor(Math.random() * 100)}
+                    name={i.name}
+                    category={i.category}
+                    key={Math.random() * 100}
                   />
                 );
               })}
@@ -89,12 +90,12 @@ export function HomeContent() {
           <div>
             <p className={styles.items_category}>Meat & Fish</p>
             <div className={styles.items_container}>
-              {data.meatAndFish.map((i) => {
+              {data.meatAndFish.map((i: itemType) => {
                 return (
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                   />
                 );
               })}
@@ -107,12 +108,12 @@ export function HomeContent() {
           <div>
             <p className={styles.items_category}>Vegetables</p>
             <div className={styles.items_container}>
-              {data.vegetables.map((i) => {
+              {data.vegetables.map((i: itemType) => {
                 return (
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                   />
                 );
               })}
@@ -125,12 +126,12 @@ export function HomeContent() {
           <div>
             <p className={styles.items_category}>Fruits</p>
             <div className={styles.items_container}>
-              {data.fruits.map((i) => {
+              {data.fruits.map((i: itemType) => {
                 return (
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.floor(Math.random() * 100)}
+                    key={Math.random() * 100}
                   />
                 );
               })}
@@ -143,13 +144,12 @@ export function HomeContent() {
           <div>
             <p className={styles.items_category}>Pasta</p>
             <div className={styles.items_container}>
-              {data.pasta.map((i) => {
+              {data.pasta.map((i: itemType) => {
                 return (
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.floor(Math.random() * 100)}
-                    
+                    key={Math.random() * 100}
                   />
                 );
               })}
