@@ -1,9 +1,5 @@
 import { login } from "api";
-import {
-  setAuthIdInLocalStorage,
-  setTokenInLocalStorage,
-  setUserIdStoraged,
-} from "lib";
+import { setTokenInLocalStorage, setUserIdStoraged } from "lib";
 import styles from "./login.module.css";
 import { useRouter } from "next/router";
 import { useUserId } from "lib/hooks";
@@ -19,7 +15,6 @@ export function LoginForm() {
     const res = await login({ fullname, email, password });
     if (res) {
       setTokenInLocalStorage(res.token);
-      setAuthIdInLocalStorage(res.authId);
       setUserIdStoraged(res.userId);
       setUserId(res.userId);
       router.push("/home");
