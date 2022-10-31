@@ -3,6 +3,7 @@ import { ShoppingList } from "components/shoplist";
 import styles from "./userList.module.css";
 import { deleteShoppingList, getUserLists } from "api";
 import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export function UserLists() {
   const [myLists, setMyLists] = useState([{}]);
@@ -37,7 +38,7 @@ export function UserLists() {
               removeItem={() => {
                 deleteShoppingListFromState(l.id, l);
               }}
-              key={l.id}
+              key={uuidv4()}
             />
           );
         })}

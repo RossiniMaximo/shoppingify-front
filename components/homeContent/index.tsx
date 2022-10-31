@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useIsListValue } from "lib/hooks";
 import { AddItemForm } from "components/addItemForm";
 import { itemType } from ".d";
+import { v4 as uuidv4 } from "uuid";
 
 export function HomeContent() {
   const [isAddItem, setIsAddItem] = useState(false);
@@ -40,7 +41,7 @@ export function HomeContent() {
                 <ItemCards
                   name={item.name}
                   category={item.category}
-                  key={Math.random() * 100}
+                  key={uuidv4()}
                 />
               </div>
             );
@@ -59,7 +60,7 @@ export function HomeContent() {
                   <ItemCards
                     name={b.name}
                     category={b.category}
-                    key={Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -77,7 +78,7 @@ export function HomeContent() {
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -95,7 +96,7 @@ export function HomeContent() {
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -113,7 +114,7 @@ export function HomeContent() {
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -131,7 +132,7 @@ export function HomeContent() {
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -149,7 +150,7 @@ export function HomeContent() {
                   <ItemCards
                     name={i.name}
                     category={i.category}
-                    key={Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}

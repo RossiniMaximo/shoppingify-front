@@ -16,7 +16,8 @@
     "react-dom": "18.2.0",
     "react-loader-spinner": "^5.3.4",
     "recharts": "^2.1.15",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "18.7.18",

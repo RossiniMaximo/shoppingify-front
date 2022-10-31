@@ -5,6 +5,7 @@ import { ListItemCard } from "ui/icons/cards/listItem";
 import { useListTitleValue } from "lib/hooks";
 import { ShoppingList } from "components/shoplist";
 import { itemType } from ".d";
+import { v4 as uuidv4 } from "uuid";
 
 export function UserList(props) {
   const listTitle = useListTitleValue();
@@ -44,7 +45,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id || Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -64,7 +65,7 @@ export function UserList(props) {
                       name={item.name}
                       description={item.description}
                       img={item.img}
-                      key={item.id || Math.random() * 100}
+                      key={uuidv4()}
                     />
                   </div>
                 );
@@ -84,7 +85,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id || Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -103,7 +104,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id || Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -122,7 +123,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id || Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}
@@ -141,7 +142,7 @@ export function UserList(props) {
                     name={item.name}
                     description={item.description}
                     img={item.img}
-                    key={item.id || Math.random() * 100}
+                    key={uuidv4()}
                   />
                 );
               })}

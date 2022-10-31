@@ -12,6 +12,7 @@ import { ShoppingListForStats } from "components/shoplist";
 import { getListsStats, sortByMostPopularItem, sortCategoriesStats } from "lib";
 import { useEffect, useState } from "react";
 import { StatsBox } from "ui/icons/cards/statsBox";
+import { v4 as uuidv4 } from "uuid";
 
 export function StatisticsComponent() {
   const [statistics, setStatistics] = useState(null) as any;
@@ -61,7 +62,7 @@ export function StatisticsComponent() {
                     width={"300px"}
                     label={item.name}
                     color="var(--orange)"
-                    key={item.quantity}
+                    key={uuidv4()}
                   />
                 );
               })}

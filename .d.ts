@@ -1,7 +1,7 @@
 export type ItemCardsProps = {
   name: string;
   category: string;
-  key: number;
+  key: string;
 };
 
 type ListCardProps = {
@@ -20,12 +20,12 @@ type itemType = {
   img: string;
   listItem: object;
   updatedAt: string;
-  key: number;
+  key: string;
 };
 
 type ListItemCardType = {
-    name: string;
-    img?: string;
-    description: string;
-    key: number;
-  };
+  name: string;
+  img?: string;
+  description: string;
+  key: string;
+};
