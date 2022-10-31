@@ -6,6 +6,9 @@ const nextConfig = withSvgr({
   images: {
     domains: ["upload.wikimedia.org", "firebasestorage.googleapis.com"],
   },
+  env: {
+    PRODUCTION_DATABASE: process.env.PRODUCTION_DATABASE,
+  },
 });
 
 module.exports = nextConfig;

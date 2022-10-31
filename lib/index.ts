@@ -1,6 +1,7 @@
 import { getListItems, getUserLists } from "api";
 
 const DEV_URL = "http://localhost:5500";
+const PROD_URL = process.env.PRODUCTION_DATABASE;
 
 export function getAuthToken() {
   return localStorage.getItem("auth_token");
@@ -17,7 +18,7 @@ export async function fetchAPI(input: RequestInfo, init: RequestInit | {}) {
     newInit.headers["Content-Type"] = "application/json";
     newInit.body = JSON.stringify(newInit.body);
   }
-  const res = await fetch(DEV_URL + input, newInit);
+  const res = await fetch(PROD_URL + input, newInit);
   try {
     const data = await res.json();
     return data;
@@ -91,7 +92,6 @@ export function sortCategoriesStats(lists) {
 }
 
 export function sortByMostPopularItem(items) {
-
   let stats: {}[] = [];
   const itemsArr: string[] = [];
   const uniqueNames: {}[] = [];
