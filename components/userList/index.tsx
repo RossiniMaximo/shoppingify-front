@@ -27,7 +27,7 @@ export function UserList(props) {
   }
   useEffect(() => {
     pullListItems();
-  }, []);
+  }, [props.query]);
 
   return (
     <div className={styles.main}>
