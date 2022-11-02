@@ -4,10 +4,10 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
   border-right: solid 1px;
+  gap: 200px;
 }
 .mid_container {
   display: flex;
