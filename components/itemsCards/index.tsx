@@ -27,7 +27,6 @@ export function ItemCards(props: ItemCardsProps) {
     } else if (props.category == "Beverages") {
       setBeverages((currentAtom) => [...currentAtom, props.name]);
     } else if (props.category == "Dairy products") {
-      console.log("The fucking dairy ones :", dairyProducts);
       setDairyProducts((currentAtom) => [...currentAtom, props.name]);
     } else if (props.category == "Pasta") {
       setPasta((currentAtom) => [...currentAtom, props.name]);

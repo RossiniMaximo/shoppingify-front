@@ -7,7 +7,9 @@ import { ShoppingList } from "components/shoplist";
 import { itemType } from ".d";
 import { v4 as uuidv4 } from "uuid";
 
-export function UserList(props) {
+export function UserList(props: { query: string }) {
+  console.log("props :", props);
+
   const listTitle = useListTitleValue();
   const [vegetables, setVegetables] = useState([]);
   const [meat, setMeat] = useState([]);
@@ -17,13 +19,15 @@ export function UserList(props) {
   const [beverages, setBeverages] = useState([]);
 
   async function pullListItems() {
-    const result = await getListItems(props.query);
-    setVegetables(result.vegetables);
-    setMeat(result.meat);
-    setPasta(result.pasta);
-    setFruit(result.fruit);
-    setDairy(result.dairy);
-    setBeverages(result.beverages);
+    if (props.query) {
+      const result = await getListItems(props.query);
+      setVegetables(result.vegetables);
+      setMeat(result.meat);
+      setPasta(result.pasta);
+      setFruit(result.fruit);
+      setDairy(result.dairy);
+      setBeverages(result.beverages);
+    }
   }
   useEffect(() => {
     pullListItems();

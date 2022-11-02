@@ -5,12 +5,12 @@ import styles from "./listId.module.css";
 
 export default function List() {
   const router = useRouter();
-  const listId = router.query.listId;
-  // Invocar componente y pasarle el id de la list que recibimos en la query.
+  const listId = router.query.listId as string;
+
   return (
     <div className={styles.container}>
       <Layout />
-      <UserList query={listId} />
+      {listId ? <UserList query={listId} /> : ""}
     </div>
   );
 }

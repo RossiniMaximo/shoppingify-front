@@ -17,7 +17,7 @@ export async function fetchAPI(input: RequestInfo, init: RequestInit | {}) {
     newInit.headers["Content-Type"] = "application/json";
     newInit.body = JSON.stringify(newInit.body);
   }
-  const res = await fetch(PROD_URL + input, newInit);
+  const res = await fetch(DEV_URL + input, newInit);
   try {
     const data = await res.json();
     return data;
