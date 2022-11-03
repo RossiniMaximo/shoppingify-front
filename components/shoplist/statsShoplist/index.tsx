@@ -11,8 +11,8 @@ import {
   useUserIdValue,
 } from "lib/hooks";
 import { useState, useEffect } from "react";
-import styles2 from "./statsShopList.module.css";
-import styles from "./shoplist.module.css";
+import styles2 from "../statsShopList.module.css";
+import styles from "../shoplist.module.css";
 import { ItemManager } from "components/itemManager";
 import { PopUp } from "components/popup";
 import { Source } from "ui/icons/source";
