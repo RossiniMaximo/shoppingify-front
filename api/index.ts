@@ -6,13 +6,7 @@ export async function createList(title: string) {
     method: "POST",
     body: { title, userId },
   });
-  if (data) {
-    console.log("DATA :", data);
-
-    return data;
-  } else {
-    return console.error("error in createList");
-  }
+  return data;
 }
 
 export async function addItemsToShoppingList(listId, items) {
