@@ -1,13 +1,18 @@
 import { fetchAPI, getUserIdStoraged } from "lib";
 
 export async function createList(title: string) {
-
   const userId = getUserIdStoraged();
   const data = await fetchAPI("/shopping-list", {
     method: "POST",
     body: { title, userId },
   });
-  return data;
+  if (data) {
+    console.log("DATA :", data);
+
+    return data;
+  } else {
+    return console.error("error in createList");
+  }
 }
 
 export async function addItemsToShoppingList(listId, items) {

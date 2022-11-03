@@ -72,7 +72,7 @@ export function ShoppingList(props: ShoppingListProps) {
 
     const listName = e.target.title.value;
 
-    // setListTitle(listName);
+    setListTitle(listName);
 
     const listItems = [
       ...beverages,
@@ -83,14 +83,14 @@ export function ShoppingList(props: ShoppingListProps) {
       ...pasta,
     ];
 
-    // const storageItems = {
-    //   beverages: [...beverages],
-    //   meatAndFish: [...meatAndFish],
-    //   vegetables: [...vegetables],
-    //   pasta: [...pasta],
-    //   dairyProducts: [...dairyProducts],
-    //   fruits: [...fruits],
-    // };
+    const storageItems = {
+      beverages: [...beverages],
+      meatAndFish: [...meatAndFish],
+      vegetables: [...vegetables],
+      pasta: [...pasta],
+      dairyProducts: [...dairyProducts],
+      fruits: [...fruits],
+    };
 
     const data = await createList(listName);
 
@@ -291,7 +291,13 @@ export function ShoppingList(props: ShoppingListProps) {
     </div>
   );
 }
-
+//
+//
+//
+//
+//
+//
+//
 export function ShoppingListForStats(props: ShoppingListProps) {
   const [beverages, setBeverages] = useBeverages() as any;
   const [meatAndFish, setMeatAndFish] = useMeatAndFish() as any;
