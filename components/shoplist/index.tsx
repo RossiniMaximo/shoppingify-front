@@ -72,7 +72,7 @@ export function ShoppingList(props: ShoppingListProps) {
 
     const listName = e.target.title.value;
 
-    setListTitle(listName);
+    // setListTitle(listName);
 
     const listItems = [
       ...beverages,
@@ -83,16 +83,14 @@ export function ShoppingList(props: ShoppingListProps) {
       ...pasta,
     ];
 
-    const storageItems = {
-      beverages: [...beverages],
-      meatAndFish: [...meatAndFish],
-      vegetables: [...vegetables],
-      pasta: [...pasta],
-      dairyProducts: [...dairyProducts],
-      fruits: [...fruits],
-    };
-
-    console.log("list items :", listItems);
+    // const storageItems = {
+    //   beverages: [...beverages],
+    //   meatAndFish: [...meatAndFish],
+    //   vegetables: [...vegetables],
+    //   pasta: [...pasta],
+    //   dairyProducts: [...dairyProducts],
+    //   fruits: [...fruits],
+    // };
 
     const data = await createList(listName);
 
@@ -101,7 +99,7 @@ export function ShoppingList(props: ShoppingListProps) {
     console.log("data :", data);
 
     if (data) {
-      persistShoppingList(storageItems, data.id);
+      /*  persistShoppingList(storageItems, data.id); */
       setIsLoading(false);
       const listId = data.id;
       setListId(listId);
