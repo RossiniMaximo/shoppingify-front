@@ -1,11 +1,8 @@
 import { fetchAPI, getUserIdStoraged } from "lib";
 
 export async function createList(title: string) {
-  console.log("title :", title);
 
   const userId = getUserIdStoraged();
-  console.log("userId :", userId);
-
   const data = await fetchAPI("/shopping-list", {
     method: "POST",
     body: { title, userId },

@@ -89,11 +89,11 @@ export function ShoppingList(props: ShoppingListProps) {
       fruits: [...fruits],
     };
     console.log("list items :", listItems);
-    
+
     const data = await createList(listName);
     console.log("data :", data);
 
-    if (data) {
+    /* if (data) {
       const listId = data.id;
       console.log("entra hasta listID ");
 
@@ -107,7 +107,7 @@ export function ShoppingList(props: ShoppingListProps) {
       console.log("res:", res);
 
       return res;
-    }
+    } */
   }
 
   function removeIt(items, item, category) {
