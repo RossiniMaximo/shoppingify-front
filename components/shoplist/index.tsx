@@ -96,8 +96,6 @@ export function ShoppingList(props: ShoppingListProps) {
 
     setIsLoading(true);
 
-    console.log("data :", data);
-
     if (data) {
       /*  persistShoppingList(storageItems, data.id); */
       setIsLoading(false);
