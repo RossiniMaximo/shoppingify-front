@@ -91,7 +91,6 @@ export async function deleteShoppingList(listId) {
 
 export async function getItemsByName(itemName: string) {
   const userId = getUserIdStoraged();
-
   const result = await fetchAPI("/item", {
     method: "POST",
     body: {

@@ -88,17 +88,16 @@ export function ShoppingList(props: ShoppingListProps) {
       fruits: [...fruits],
     };
 
+    setIsLoading(true);
     const data = await createList(listName);
 
-    setIsLoading(true);
-
     if (data) {
+      setIsPopUp(true);
       persistShoppingList(storageItems, data.id);
       setIsLoading(false);
       const listId = data.id;
       setListId(listId);
       const res = await addItemsToShoppingList(listId, listItems);
-      setIsPopUp(true);
       return res;
     }
   }

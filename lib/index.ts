@@ -18,16 +18,10 @@ export async function fetchAPI(input: RequestInfo, init: RequestInit | {}) {
     newInit.body = JSON.stringify(newInit.body);
   }
   const res = await fetch(PROD_URL + input, newInit);
-  console.log("RES :", res);
-
   try {
     const data = await res.json();
-    console.log("DATA:", data);
-
     return data;
   } catch (error) {
-    console.log("ERROR :", error);
-
     return { error };
   }
 }
