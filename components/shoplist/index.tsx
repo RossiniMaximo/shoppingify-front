@@ -89,7 +89,7 @@ export function ShoppingList(props: ShoppingListProps) {
       fruits: [...fruits],
     };
     console.log("list items :", listItems);
-
+    
     const data = await createList(listName);
     console.log("data :", data);
 
