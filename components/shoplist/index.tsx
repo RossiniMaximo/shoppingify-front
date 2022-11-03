@@ -69,9 +69,11 @@ export function ShoppingList(props: ShoppingListProps) {
 
   async function handleCreateList(e) {
     e.preventDefault();
-    setIsLoading(true);
+
     const listName = e.target.title.value;
+
     setListTitle(listName);
+
     const listItems = [
       ...beverages,
       ...meatAndFish,
@@ -80,6 +82,7 @@ export function ShoppingList(props: ShoppingListProps) {
       ...fruits,
       ...pasta,
     ];
+
     const storageItems = {
       beverages: [...beverages],
       meatAndFish: [...meatAndFish],
@@ -88,26 +91,24 @@ export function ShoppingList(props: ShoppingListProps) {
       dairyProducts: [...dairyProducts],
       fruits: [...fruits],
     };
+
     console.log("list items :", listItems);
 
     const data = await createList(listName);
+
+    setIsLoading(true);
+
     console.log("data :", data);
 
-    /* if (data) {
-      const listId = data.id;
-      console.log("entra hasta listID ");
-
+    if (data) {
       persistShoppingList(storageItems, data.id);
-      console.log("Aca ? ");
-
-      setIsPopUp(true);
       setIsLoading(false);
+      const listId = data.id;
       setListId(listId);
       const res = await addItemsToShoppingList(listId, listItems);
-      console.log("res:", res);
-
+      setIsPopUp(true);
       return res;
-    } */
+    }
   }
 
   function removeIt(items, item, category) {
