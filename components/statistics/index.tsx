@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { ShoppingListForStats } from "components/shoplist";
+import { ShoppingListForStats } from "components/shoplist/statsShoplist";
 import { getListsStats, sortByMostPopularItem, sortCategoriesStats } from "lib";
 import { useEffect, useState } from "react";
 import { StatsBox } from "ui/icons/cards/statsBox";
