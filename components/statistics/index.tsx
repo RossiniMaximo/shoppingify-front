@@ -68,9 +68,7 @@ export function StatisticsComponent() {
               })}
             </div>
           </div>
-          {categoriesStats.meat &&
-          categoriesStats.beverages &&
-          categoriesStats.dairy ? (
+          {itemStats ?  (
             <div className={styles.chart}>
               <p className={styles.chart_title}>Top categories</p>
               <div>
