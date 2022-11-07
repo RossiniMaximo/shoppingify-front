@@ -68,7 +68,7 @@ export function StatisticsComponent() {
               })}
             </div>
           </div>
-          {categoriesStats != null ? (
+          {categoriesStats ? (
             <div className={styles.chart}>
               <p className={styles.chart_title}>Top categories</p>
               <div>
@@ -127,7 +127,7 @@ export function StatisticsComponent() {
               </div>
             </div>
           ) : (
-            ""
+            <div></div>
           )}
         </div>
         {statistics ? (
