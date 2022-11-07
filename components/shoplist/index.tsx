@@ -274,7 +274,9 @@ export function ShoppingList(props: ShoppingListProps) {
           />
           <div className={styles.form_btn_container}>
             {isLoading ? (
-              <Spinner />
+              <div className={styles.spinner_container}>
+                <Spinner />
+              </div>
             ) : (
               <button className={styles.form_btn}>Save</button>
             )}
