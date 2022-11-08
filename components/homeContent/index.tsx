@@ -33,6 +33,13 @@ export function HomeContent() {
           <span className={styles.name}>Shoppingify</span> allows you take your
           shopping list wherever you go
         </h1>
+        {isList ? (
+          <div className={styles.low_res_list}>
+            <ShoppingList />
+          </div>
+        ) : (
+          ""
+        )}{" "}
         <div className={styles.search_bar}>
           <SearchForm
             searchResults={(results) => {
@@ -167,13 +174,6 @@ export function HomeContent() {
           ""
         )}
       </div>
-      {isList ? (
-        <div className={styles.low_res_list}>
-          <ShoppingList />
-        </div>
-      ) : (
-        ""
-      )}
 
       <div className={styles.shoppinglist_container}>
         {isAddItem ? (
